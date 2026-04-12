@@ -1,1 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui">
+    <StackLayout Padding="20">
 
+        <Label Text="Estado del Bastón"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <ListView ItemsSource="{Binding Alertas}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Mensaje}"
+                              Detail="{Binding Distancia}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>
